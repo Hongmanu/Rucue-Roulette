@@ -56,7 +56,7 @@
     const turns=360*6;
     const wheel=$('wheel');
     const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    $('status').textContent='🎡 꾸꾸의 룰렛이 돌아간다!';
+    $('status').textContent='🎡 파란여우의 룰렛이 돌아간다!';
     requestAnimationFrame(()=>requestAnimationFrame(()=>{
       wheel.style.transform=`rotate(${turns+landing}deg)`;
     }));
