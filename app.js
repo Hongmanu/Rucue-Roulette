@@ -1,14 +1,13 @@
 /* 루쿠 NFC 룰렛: 정적 웹사이트, 로컬 수집 도감. */
 (() => {
   'use strict';
-  const KEY = 'rucue-roulette-collection-v1';
+  const KEY = 'rucue-goods-collection-v1';
   const prizes = [
-    {id:'normal', name:'일반 포토카드', icon:'🃏', weight:40},
-    {id:'leaf', name:'파란 나뭇잎', icon:'🍃', weight:25},
-    {id:'rare', name:'레어 포토카드', icon:'✨', weight:18},
-    {id:'hint', name:'암호 힌트', icon:'🔑', weight:10},
-    {id:'key', name:'히든 룸 열쇠', icon:'🗝️', weight:6},
-    {id:'secret', name:'시크릿 카드', icon:'👑', weight:1}
+    {id:'keycap_basic', name:'키캡(기본)', icon:'⌨️', weight:28},
+    {id:'keycap_squish', name:'키캡(찌부)', icon:'🐾', weight:28},
+    {id:'keycap_halloween', name:'키캡(할로윈)', icon:'🎃', weight:28},
+    {id:'pouch', name:'파우치', icon:'🎒', weight:13},
+    {id:'tshirt', name:'티셔츠', icon:'👕', weight:3}
   ];
   const $ = id => document.getElementById(id);
   let collection = {};
@@ -66,9 +65,9 @@
       try { localStorage.setItem(KEY,JSON.stringify(collection)); }
       catch(e) {storageAvailable=false;}
       render();
-      $('status').textContent='🎉 이번 방문의 룰렛 결과!';
+      $('status').textContent='🎉 이번 방문의 굿즈 룰렛 결과!';
       $('result').textContent=`${prize.icon} ${prize.name} 획득!`;
-      $('notice').textContent=storageAvailable?'도감에 저장했어! 다음에 NFC를 다시 찍으면 또 돌아가.':'저장에 실패했어. 브라우저의 사이트 저장 설정을 확인해줘.';
+      $('notice').textContent=storageAvailable?'브라우저에 결과를 저장했어! 실제 굿즈 수령은 운영자 확인이 필요해.':'저장에 실패했어. 브라우저의 사이트 저장 설정을 확인해줘.';
     },reduceMotion?150:4500);
   }
   // 페이지 로드당 한 번만 시작. NFC 자체를 브라우저에서 감지하지는 않음.
