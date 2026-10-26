@@ -33,3 +33,11 @@ transition:transform 4.2s cubic-bezier(.12,.72,.12,1)}.wheel-center{position:abs
   object-fit: contain;
   flex-shrink: 0;
 }
+
+:root {
+  color-scheme: only light;
+}
+
+html {
+  color-scheme: only light;
+}
