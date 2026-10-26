@@ -3,10 +3,10 @@
   'use strict';
   const KEY = 'rucue-goods-collection-v1';
   const prizes = [
-    {id:'keycap_basic', name:'키캡(기본)', icon:'⌨️', weight:33},
-    {id:'keycap_squish', name:'키캡(찌부)', icon:'🐾', weight:33},
-    {id:'keycap_halloween', name:'키캡(할로윈)', icon:'🎃', weight:33},
-    {id:'pouch', name:'파우치', icon:'🎒', weight:1},
+    {id:'keycap_basic', name:'키캡(기본)', icon:'⌨️', weight:32},
+    {id:'keycap_squish', name:'키캡(찌부)', icon:'🐾', weight:32},
+    {id:'keycap_halloween', name:'키캡(할로윈)', icon:'🎃', weight:32},
+    {id:'pouch', name:'파우치', icon:'🎒', weight:4},
   ];
   const $ = id => document.getElementById(id);
   let collection = {};
